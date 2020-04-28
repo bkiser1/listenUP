@@ -7,9 +7,10 @@ const Describ = () => {
 			<div className='center_wrapper'>
 				<h2>Concerts</h2>
 				<div className='highlight_description'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-					cupiditate enim commodi in velit quasi facilis modi autem odio ea nemo
-					voluptatem numquam, ipsam sint, non vero. Totam, nihil eius?
+					Corona Concerts are about to gear up! We have a real treat for you all
+					..your favorites artist will be touring to cities near you reserve
+					your seats now! What ever genre makes you move come out and have some
+					FUN.
 				</div>
 			</div>
 		</Wobble>

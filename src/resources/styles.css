@@ -87,7 +87,9 @@ body {
 }
 
 .center_wrapper {
-	width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 0 auto;
 }
 
@@ -158,14 +160,22 @@ button {
 	border-bottom: 1px solid #dddddd;
 	padding: 30px 0px;
 }
+.center_wrapper .highlight_description {
+	margin: 10px 10px;
+	text-align: center;
+	font-family: "Playfair Display", serif;
+	font-size: 20px;
+}
 
 .discount_wrapper {
-	flex-direction: column;
+	display: flex;
+	justify-content: center;
 	padding: 70px 0px;
 }
 
 .discount_wrapper .discount_percentage {
 	padding-right: 100px;
+	margin-left: 13px;
 }
 
 .discount_wrapper .discount_percentage span:nth-child(1) {
@@ -194,6 +204,8 @@ button {
 	line-height: 30px;
 	font-size: 18px;
 	font-weight: 300;
+	margin-right: 10px;
+	font-family: "Playfair Display", serif;
 }
 
 .pricing_section {
@@ -261,5 +273,50 @@ button {
 		position: absolute;
 		top: 70%;
 		width: 300px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.discount_wrapper .discount_percentage span:nth-child(1) {
+		font-size: 50px;
+	}
+	.center_wrapper {
+		justify-content: center;
+	}
+	.highlight_description {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	.discount_description {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	.discount_wrapper .discount_description h3 {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	.pricing_inner .pricing_title span:nth-child(1) {
+		font-size: 20px;
+	}
+	.pricing_inner .pricing_title span:nth-child(2) {
+		font-size: 13px;
+	}
+	.pricing_inner .pricing_description {
+		font-size: 10px;
+	}
+	.pricing_wrapper .pricing_item {
+		flex-grow: 1;
+		width: 34%;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	.discount_wrapper .discount_percentage {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: inline;
 	}
 }

@@ -39,10 +39,10 @@ class Discount extends Component {
 						<div className='discount_description'>
 							<h3>Purchase Tickets Now!</h3>
 							<p>
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum,
-								ut asperiores dicta quaerat molestiae aliquid odit dignissimos
-								consectetur inventore enim perferendis sunt ipsum placeat,
-								repudiandae ipsa! Explicabo aut mollitia amet.
+								Several vendors are on board trust me you dont want to miss
+								this! We have been in the house for a couple of months now..
+								heck I even created this during that time so dont delay reserve
+								your tickets now!
 							</p>
 							<div>
 								<UseButton
