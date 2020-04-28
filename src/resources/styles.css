@@ -10,9 +10,16 @@ body {
 	color: #f44336;
 }
 
+.inner_artist {
+	border: #2c2c2c;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
 .search_wrapper {
 	position: absolute;
-	top: 130%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: rgba(0, 0, 0, 0.6);
@@ -50,16 +57,30 @@ body {
 .black_out {
 	background: #3c3c3c;
 }
-.bck_white {
-	background: #ffffff;
-}
-.bck_red {
-	background: #ff4800;
-}
-.bck_yellow {
-	background: #ffa800;
+
+.artist_srch {
+	flex-wrap: wrap;
+	background-color: #2c2c2c;
+	height: 500px;
+	width: 400px;
+	border: #2c2c2c 2px solid;
+	margin: 20px 30px;
+	color: #ffffff;
 }
 
+.artist_container {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: center;
+	background-color: #3c3c3c;
+}
+.img_box {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border: #f44336 solid;
+}
 .iconImage {
 	width: 20px;
 	margin-right: 10px;
@@ -86,22 +107,6 @@ header .header_logo_title {
 	text-transform: uppercase;
 }
 
-/*====================
-      FOOTER
-======================*/
-
-footer {
-	padding: 50px 0px;
-	text-align: center;
-	font-size: 60px;
-	color: #ffffff;
-	background: red;
-}
-
-footer .footer_copyright {
-	font-size: 18px;
-}
-
 .carrousel_wrapper {
 	height: 700px;
 	overflow: hidden;
@@ -110,82 +115,36 @@ footer .footer_copyright {
 .carrousel_image {
 	background-size: cover !important;
 }
-audio {
-	display: inline;
-}
-/*====================
-      VENUE NFO
-======================*/
 
-.vn_wrapper {
+.footer {
+	height: auto;
+	width: 100%;
+	background-color: #f44336;
 	display: flex;
-	padding: 170px 0px;
+	justify-content: center;
 }
 
-.vn_item {
-	width: 50%;
-	color: #ffffff;
-	text-align: center;
+h2 {
+	font-family: "Bangers", cursive;
+	font-size: 50px;
+}
+.inner_footer {
+	font-size: 10px;
 }
 
-.vn_item .vn_outer {
-	width: 300px;
-	border: 2px solid #828282;
-	margin: auto;
-	padding: 5px;
+button {
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	height: 30px;
 }
-
-.vn_item .vn_inner {
-	border: 2px solid #828282;
-	position: relative;
-	padding: 0px 20px;
-	transition: all 500ms ease;
-}
-
-.vn_item .vn_inner:hover {
-	background: #3e3e3e;
-}
-
-.vn_item .vn_icon_square {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	top: -54px;
-	left: 100px;
-}
-
-.vn_item .vn_icon {
-	width: 50px;
-	height: 50px;
-	background-size: contain !important;
-	background-repeat: no-repeat !important;
-	position: absolute;
-	top: -30px;
-	left: 124px;
-}
-
-.vn_item .vn_title {
-	font-size: 28px;
-	margin: 90px 0px 20px 0px;
-	border-bottom: 1px solid #5d5d5d;
-	padding-bottom: 10px;
-}
-
-.vn_item .vn_desc {
-	font-size: 30px;
-	font-weight: 300;
-	margin-bottom: 90px;
-}
-
-/*====================
-      HIGHLIGHTS
-======================*/
 
 .highlight_wrapper h2 {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 	text-transform: uppercase;
 	color: #2c2c2c;
 	font-size: 52px;
@@ -201,15 +160,15 @@ audio {
 }
 
 .discount_wrapper {
-	display: flex;
+	flex-direction: column;
 	padding: 70px 0px;
 }
 
-.discount_wrapper .discount_porcentage {
+.discount_wrapper .discount_percentage {
 	padding-right: 100px;
 }
 
-.discount_wrapper .discount_porcentage span:nth-child(1) {
+.discount_wrapper .discount_percentage span:nth-child(1) {
 	color: #ff4800;
 	font-size: 125px;
 	font-weight: 400;
@@ -217,7 +176,7 @@ audio {
 	line-height: 120px;
 }
 
-.discount_wrapper .discount_porcentage span:nth-child(2) {
+.discount_wrapper .discount_percentage span:nth-child(2) {
 	color: #2c2c2c;
 	font-size: 50px;
 	font-weight: 400;
@@ -236,10 +195,6 @@ audio {
 	font-size: 18px;
 	font-weight: 300;
 }
-
-/*====================
-      PRICING
-======================*/
 
 .pricing_section {
 	padding: 70px 0px;
@@ -264,27 +219,27 @@ audio {
 	box-sizing: border-box;
 }
 
-.pricing_wrapper .pricing_inner_wrapper {
+.pricing_wrapper .pricing_inner {
 	border: 2px solid #ffa800;
 	padding: 50px 20px;
 }
 
-.pricing_inner_wrapper .pricing_title {
+.pricing_inner .pricing_title {
 	color: #ffffff;
 	text-align: center;
 	border-bottom: 1px solid #ffa800;
 	padding-bottom: 20px;
 }
-.pricing_inner_wrapper .pricing_title span:nth-child(1) {
+.pricing_inner .pricing_title span:nth-child(1) {
 	font-size: 50px;
 	display: block;
 }
-.pricing_inner_wrapper .pricing_title span:nth-child(2) {
+.pricing_inner .pricing_title span:nth-child(2) {
 	text-transform: uppercase;
 	font-size: 28px;
 	font-weight: 300;
 }
-.pricing_inner_wrapper .pricing_description {
+.pricing_inner .pricing_description {
 	color: #b8b8b8;
 	font-weight: 300;
 	font-size: 14px;
@@ -293,30 +248,18 @@ audio {
 	min-height: 70px;
 }
 
-.pricing_inner_wrapper .pricing_buttons {
+.pricing_inner .pricing_buttons {
 	text-align: center;
 }
 
-/*====================
-      LOCATION    
-======================*/
-
-.location_wrapper {
-	position: relative;
-}
-
-.location_tag {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-}
-.location_tag div {
+.bck_black {
 	background: #2c2c2c;
-	color: #ffffff;
-	text-transform: uppercase;
-	width: 220px;
-	margin: 0 auto;
-	font-size: 29px;
-	padding: 15px 20px;
-	text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+	.search_wrapper {
+		position: absolute;
+		top: 70%;
+		width: 300px;
+	}
 }

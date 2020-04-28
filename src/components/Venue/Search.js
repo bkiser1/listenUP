@@ -1,6 +1,14 @@
 import React from "react";
+import { scroller } from "react-scroll";
 
 const Search = (props) => {
+	const scrollToTop = (element) => {
+		scroller.scrollTo(element, {
+			duration: 1500,
+			delay: 100,
+			smooth: true,
+		});
+	};
 	return (
 		<div>
 			<form onSubmit={props.finder} className='search_wrapper'>
@@ -12,7 +20,7 @@ const Search = (props) => {
 					required
 				/>
 				<div class='searchbtn'>
-					<button>
+					<button onClick={() => scrollToTop("artist")}>
 						<i class='fas fa-search'></i>
 					</button>
 				</div>

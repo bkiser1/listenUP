@@ -2,8 +2,17 @@ import React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import { scroller } from "react-scroll";
 
 const SideDrawer = (props) => {
+	const scrollToTop = (element) => {
+		scroller.scrollTo(element, {
+			duration: 1500,
+			delay: 100,
+			smooth: true,
+		});
+	};
+
 	return (
 		<Drawer
 			anchor='right'
@@ -17,16 +26,12 @@ const SideDrawer = (props) => {
 				}}
 				component='nav'
 			>
-				<ListItem button onClick={() => console.log("features")}>
-					Artist Search
+				<ListItem button onClick={() => scrollToTop("inform")}>
+					ConCerts
 				</ListItem>
 
-				<ListItem button onClick={() => console.log("features")}>
-					Trackology
-				</ListItem>
-
-				<ListItem button onClick={() => console.log("features")}>
-					Links
+				<ListItem button onClick={() => scrollToTop("prices")}>
+					Prices
 				</ListItem>
 			</List>
 		</Drawer>

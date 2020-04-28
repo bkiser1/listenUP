@@ -29,6 +29,7 @@ const ImgCarousel = () => {
 							background: `url(${imgageOne})`,
 							height: `${window.innerHeight}px`,
 							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
 						}}
 					></div>
 				</div>

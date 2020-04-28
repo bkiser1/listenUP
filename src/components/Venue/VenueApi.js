@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import Search from "./Search";
-import Player from "./Player";
+import Footer from "../header_footer/Footer";
 
 class VenueApi extends Component {
 	constructor(props) {
@@ -11,8 +11,9 @@ class VenueApi extends Component {
 		this.state = {
 			search: "",
 			artist: "",
-			isloaded: false,
+			isLoaded: false,
 			show: false,
+			error: null,
 		};
 	}
 
@@ -24,25 +25,52 @@ class VenueApi extends Component {
 		axios
 			.get(`/search?q=${musician}`)
 			.then((res) => {
-				const artist = res.data.data[0];
-				console.log(artist);
 				this.setState({
-					artist,
-					isloaded: true,
+					artist: res.data.data,
+					isLoaded: true,
 				});
 			})
 			.catch((err) => console.log(err.response));
 	};
 
 	render() {
-		const { artist } = this.state;
+		//destructure from state to use
+		const { artist, isLoaded, error } = this.state;
 		console.log(artist);
-		return (
-			<div>
-				<Search finder={this.onChange} />;
-				<Player />
-			</div>
-		);
+
+		if (error) {
+			return <div>Error: {error.message}</div>;
+		} else if (!isLoaded) {
+			return (
+				<div>
+					<Search finder={this.onChange} />
+				</div>
+			);
+		} else {
+			return (
+				<div className=' artist_container'>
+					{artist.map((artist) => (
+						<div className='artist_srch'>
+							<div className='img_box'>
+								<img src={artist.album.cover_medium} alt='album cover' />
+							</div>
+							<div className='inner_artist'>
+								<p>{artist.artist.name}</p>
+								<p>{artist.album.title}</p>
+								<p>{artist.explicit_lyrics}</p>
+								<p>{artist.title_short}</p>
+								<audio controls>
+									{" "}
+									<source src={artist.preview} type='audio/mpeg'></source>
+								</audio>
+							</div>
+						</div>
+					))}
+					<Search finder={this.onChange} />
+					<Footer />
+				</div>
+			);
+		}
 	}
 }
 
