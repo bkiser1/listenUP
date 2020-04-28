@@ -2,6 +2,10 @@
 	"name": "listenup",
 	"version": "0.1.0",
 	"private": true,
+	"engines": {
+		"npm": "6.13.4",
+		"node": "12.16.1"
+	},
 	"proxy": "http://api.deezer.com",
 	"dependencies": {
 		"@babel/runtime": "7.0.0-beta.55",
