@@ -1,5 +1,4 @@
 const express = require("express");
-const proxy = require("http-proxy-middleware");
 const path = require("path");
 
 const app = express();
@@ -18,8 +17,3 @@ if (process.env.NODE_ENV === "production") {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port${PORT}`));
-
-module.exports = function (app) {
-	// add other server routes to path array
-	app.use(proxy(["/api"], { target: "http://localhost:3000" }));
-};
