@@ -49,10 +49,14 @@ class VenueApi extends Component {
 		} else {
 			return (
 				<div className=' artist_container'>
-					{artist.map((artist) => (
+					{artist.map((artist, i) => (
 						<div className='artist_srch'>
 							<div className='img_box'>
-								<img src={artist.album.cover_medium} alt='album cover' />
+								<img
+									key={i}
+									src={artist.album.cover_medium}
+									alt='album cover'
+								/>
 							</div>
 							<div className='inner_artist'>
 								<p>{artist.artist.name}</p>
