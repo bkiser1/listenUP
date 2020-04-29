@@ -23,7 +23,7 @@ class VenueApi extends Component {
 		const musician = e.target.elements.artist.value;
 		console.log(musician);
 		axios
-			.get(`https://api.deezer.com/search?q=${musician}`)
+			.get(`/search?q=${musician}`)
 			.then((res) => {
 				console.log(res);
 				this.setState({
