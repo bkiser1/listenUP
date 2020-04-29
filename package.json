@@ -2,7 +2,6 @@
 	"name": "listenup",
 	"version": "1.0.0",
 	"description": "music app",
-	"proxy": "http://api.deezer.com/",
 	"main": "server.js",
 	"dependencies": {
 		"config": "^3.3.1",
