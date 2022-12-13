@@ -5,7 +5,7 @@
 	"main": "server.js",
 	"dependencies": {
 		"config": "^3.3.1",
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"path": "^0.12.7"
 	},
 	"devDependencies": {},
